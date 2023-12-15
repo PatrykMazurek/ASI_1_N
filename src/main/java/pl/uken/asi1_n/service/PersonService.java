@@ -21,4 +21,7 @@ public class PersonService {
         return personRepository.findById(id).orElse(null);
     }
 
+    public void addPerson(Person newPerson) {
+        personRepository.save(newPerson);
+    }
 }
